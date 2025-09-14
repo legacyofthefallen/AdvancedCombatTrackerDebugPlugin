@@ -1,15 +1,14 @@
 ﻿using System.Reflection;
 using System.Resources;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyProduct("EQ Damage Per Second Plugin for ACT")]
+[assembly: AssemblyProduct("EQ Debug Log Parser Plugin for ACT")]
 [assembly: AssemblyCopyright("John H. Freeman © 2025")]
-[assembly: AssemblyTitle("EQ Damage Per Second Parsing")]
-[assembly: AssemblyDescription("https://github.com/FreedomFaighter/AdvancedCombatTrackerEQDPSPlugin")]
+[assembly: AssemblyTitle("EQ Debug Log Parser")]
+[assembly: AssemblyDescription("https://github.com/legacyofthefallen/AdvancedCombatTrackerDebugPlugin")]
 [assembly: AssemblyCulture("en-US")]
 [assembly: NeutralResourcesLanguage("en-US")]
 
@@ -25,5 +24,4 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion("2.5.5.*")]
-[assembly: InternalsVisibleTo("EQDPSPluginUnitTests")]
+[assembly: AssemblyVersion("1.1.0.*")]

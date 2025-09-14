@@ -25,7 +25,7 @@
   <PropertyGroup>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <TargetFrameworkProfile />
-    <ProjectGuid>{9B9301A0-40EA-4DA2-A2A4-CA46FC46A673}</ProjectGuid>
+    <ProjectGuid>{4CB18551-9CA6-4BCB-8137-B7265037D5A2}</ProjectGuid>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
@@ -36,10 +36,10 @@
     <StartupObject />
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyName>EverQuestDPSPlugin</AssemblyName>
+    <AssemblyName>EQDebug</AssemblyName>
   </PropertyGroup>
   <PropertyGroup>
-    <RootNamespace>EverQuestDPS</RootNamespace>
+    <RootNamespace>LotFPlugins</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>
     <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
@@ -53,10 +53,6 @@
   </Target>
   -->
   <ItemGroup>
-    <Reference Include="Advanced Combat Tracker">
-      <HintPath>$(MSBuildProgramFiles32)\Advanced Combat Tracker\Advanced Combat Tracker.exe</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Security" />
@@ -64,35 +60,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Enums\EQSwingType.cs" />
-    <Compile Include="Enums\Specials.cs" />
-    <Compile Include="Enums\SummonedEntity.cs" />
-    <Compile Include="EverQuestDPSPlugin.cs">
+    <Compile Include="EverQuestDebugPlugin.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Extensions\AttackTypeExtensions.cs" />
-    <Compile Include="Extensions\CombatantDataExtensions.cs" />
-    <Compile Include="Extensions\DamageTypeExtensions.cs" />
-    <Compile Include="Extensions\EncounterDataExtensions.cs" />
-    <Compile Include="Extensions\MasterSwingExtensions.cs" />
-    <Compile Include="Localization\EQLocalization.cs" />
-    <Compile Include="ParserObjectGenerators\AttackTypeColumnDefGenerator.cs" />
-    <Compile Include="ParserObjectGenerators\CombatantDataColumnDefGenerator.cs" />
-    <Compile Include="ParserObjectGenerators\DamageTypeDataColumnDefGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\PluginRegex.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PluginRegex.resx</DependentUpon>
     </Compile>
-    <Compile Include="StatisticalProcessors\CalculatePercentageOnCriticalAttackType.cs" />
-    <Compile Include="StatisticalProcessors\CalculatePercentageOnCriticalCombatantData.cs" />
-    <Compile Include="StatisticalProcessors\CalculatePercentageOnCriticalDamageTypeData.cs" />
-    <Compile Include="StatisticalProcessors\Variance.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="EverQuestDPSPlugin.resx">
-      <DependentUpon>EverQuestDPSPlugin.cs</DependentUpon>
+    <EmbeddedResource Include="EverQuestDebugPlugin.resx">
+      <DependentUpon>EverQuestDebugPlugin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\PluginRegex.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -100,9 +80,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Classes\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <PostBuildEvent>IF NOT EXIST "$(APPDATA)\Advanced Combat Tracker\Plugins" mkdir "$(APPDATA)\Advanced Combat Tracker\Plugins"
 IF Debug==$(ConfigurationName) copy /Y $(TargetPath) "$(APPDATA)\Advanced Combat Tracker\Plugins"</PostBuildEvent>
