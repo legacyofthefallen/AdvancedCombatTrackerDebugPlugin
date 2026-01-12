@@ -138,9 +138,6 @@
   <data name="pluginExited" xml:space="preserve">
     <value>Plugin Exited</value>
   </data>
-  <data name="pluginName" xml:space="preserve">
-    <value>Debug File Parser</value>
-  </data>
   <data name="MouseLeave" xml:space="preserve">
     <value>Mouse over user interface element to get description</value>
   </data>

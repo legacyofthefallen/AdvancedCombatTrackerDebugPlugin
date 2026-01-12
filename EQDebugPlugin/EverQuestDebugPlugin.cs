@@ -140,25 +140,22 @@ namespace LotFPlugins
 
             //pluginScreenSpace.Controls.Add(this);
             this.Dock = DockStyle.Fill;
-
             foreach (TreeNode tn in ActGlobals.oFormActMain.OptionsTreeView.Nodes)
             {
                 if (tn.Text.Equals("Data Correction"))
                 {
                     Action optionsControlSetsAdd = () =>
                     {
-                        optionsNode = tn.Nodes.Add($"{Properties.PluginRegex.pluginName}");
+                        optionsNode = tn.Nodes.Add($"{typeof(EQDebugParser).Assembly.GetName().Name}");
                         // Register our user control(this) to our newly create node path.  All controls added to the list will be laid out left to right, top to bottom
-                        ActGlobals.oFormActMain.OptionsControlSets.Add($@"Data Correction\{Properties.PluginRegex.pluginName}",
+                        ActGlobals.oFormActMain.OptionsControlSets.Add($@"Data Correction\{typeof(EQDebugParser).Assembly.GetName().Name}",
                             new List<Control> { this });
                         Label lblConfig = new Label
                         {
                             AutoSize = true,
                             Text = "Find the applicable options in the Options tab, Data Correction section."
                         };
-                        //Image img = new Bitmap(Properties.PluginRegex.logo);
 
-                        //lblConfig.Image = img;
                         lblConfig.ImageAlign = ContentAlignment.MiddleLeft;
                         lblConfig.TextAlign = ContentAlignment.MiddleCenter;
 
@@ -179,7 +176,7 @@ namespace LotFPlugins
 
             xmlSettings = new SettingsSerializer(this); // Create a new settings serializer and pass it this instance
             LoadSettings();
-            ChangePluginStatusLabel($"{Properties.PluginRegex.pluginName} started");
+            ChangePluginStatusLabel($"{typeof(EQDebugParser).Assembly.GetName().Name} started");
         }
 
         /// <summary>
@@ -206,7 +203,7 @@ namespace LotFPlugins
                 removeOptionsFromMainForm.Invoke();
             }
             SaveSettings();
-            ChangePluginStatusLabel($"{Properties.PluginRegex.pluginName} {Properties.PluginRegex.pluginExited}");
+            ChangePluginStatusLabel($"{typeof(EQDebugParser).Assembly.GetName().Name} {Properties.PluginRegex.pluginExited}");
         }
         #endregion
 

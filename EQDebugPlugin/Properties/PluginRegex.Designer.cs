@@ -122,14 +122,5 @@ namespace LotFPlugins.Properties {
                 return ResourceManager.GetString("pluginExited", resourceCulture);
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Debug File Parser.
-        /// </summary>
-        internal static string pluginName {
-            get {
-                return ResourceManager.GetString("pluginName", resourceCulture);
-            }
-        }
     }
 }
