@@ -8,10 +8,10 @@ Update feature removed and plugin file must be gotten from repository releases m
 # Build Status
 [![ACT EverQuest Debug Plugin](https://github.com/legacyofthefallen/AdvancedCombatTrackerDebugPlugin/actions/workflows/build-plugin-and-release-on-tag.yml/badge.svg)](https://github.com/legacyofthefallen/AdvancedCombatTrackerDebugPlugin/actions/workflows/build-plugin-and-release-on-tag.yml)
 
-# EverQuestDPSPlugin
+# Debug Plugin
 Compiles with .NET 4.8 which is a version unavailable with github actions
 
-Partially developed ACT plugin for parsing EverQuest log files as they are generated.
+Partially developed ACT plugin for parsing EverQuest debug log in the dbg.txt file as they are generated.
 
 Uses ACT's plugin capabilities to load the parsing plugin into the application and generate parsed data from the character's log file
 
